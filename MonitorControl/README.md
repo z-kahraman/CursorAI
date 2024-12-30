@@ -1,240 +1,81 @@
-# MonitorControl
+<<<<<<< HEAD
+# Monitor Control
 
-A desktop application providing a user-friendly interface for monitor management on Linux systems using ddcutil.
+A GUI application developed for controlling monitor settings via DDC/CI protocol on Linux systems.
 
-## Overview
+## Features
 
-MonitorControl is a comprehensive monitor management solution that leverages ddcutil to provide advanced control over display settings. Built with Qt6, it offers a modern, responsive interface for both basic and advanced monitor configurations.
+- Brightness and contrast controls
+- Dynamic Contrast Ratio (DCR) control
+- OSD menu control
+- Predefined modes (Reading, Movie, Gaming)
+- Multi-monitor support
+- Background operations
 
-## Key Features
+## Requirements
 
-### Core Features
-- 🖥️ Monitor Management
-  - Automatic detection of connected monitors
-  - Display of monitor information (model, capabilities)
-  - Multi-monitor support
-
-- 🎮 Basic Controls
-  - Brightness adjustment
-  - Contrast adjustment
-  - Color temperature control
-  - Input source selection
-
-### Advanced Features
-- 💾 Profile Management
-  - Custom preset configurations
-  - Quick switching between profiles
-  - Profile import/export
-
-- ⚙️ System Integration
-  - DBus system integration
-  - Persistent settings storage
-  - Safe command execution
-
-- 🎨 Advanced Controls
-  - Color profile management
-  - Auto-adjustment scheduling
-  - Customizable hotkeys
-  - Status monitoring and notifications
-
-## Technical Architecture
-
-### Components
-1. **System Layer**
-   - ddcutil interface
-   - Monitor communication handler
-   - Permission management
-
-2. **Application Layer**
-   - Settings manager
-   - Profile handler
-   - Event system
-   - Configuration storage
-
-3. **Presentation Layer**
-   - Modern Qt6-based GUI
-   - State management
-   - User input handling
-
-## System Requirements
-
-### Operating System
-- Linux (X11 or Wayland)
-- Properly configured DDC/CI support
-- Appropriate permissions for monitor communication
-
-### Required System Packages
+- Python 3.8+
+- PySide6
 - ddcutil
-- i2c-tools
-- Python 3.x
-- qt6-base
 
-### Python Dependencies
-- PyQt6
-- python-dbus
-- pyyaml
-- sqlite3 (built-in)
+### System Requirements
 
-## Project Structure
-
-```
-MonitorControl/
-├── src/
-│   ├── gui/              # Qt6-based GUI components
-│   │   ├── dashboard/    # Main dashboard interface
-│   │   └── settings/     # Settings panel
-│   ├── monitor/          # Monitor control logic
-│   │   ├── ddcutil/      # DDC/CI communication
-│   │   ├── profiles/     # Profile management
-│   │   └── scheduler/    # Auto-adjustment
-│   ├── system/           # System integration
-│   │   ├── dbus/         # DBus communication
-│   │   └── security/     # Permission handling
-│   └── main.py          # Application entry point
-├── tests/               # Test suite
-├── requirements.txt     # Python dependencies
-├── LICENSE             # MIT License
-└── README.md          # This file
-```
-
-## Installation
-
-1. Install system dependencies:
 ```bash
-# For Ubuntu/Debian
-sudo apt-get install ddcutil i2c-tools qt6-base-dev python3-dbus
-
-# For Fedora
-sudo dnf install ddcutil i2c-tools qt6-base python3-dbus
-```
-
-2. Clone the repository:
-```bash
-git clone https://github.com/z-kahraman/CursorAI.git
-cd MonitorControl
-```
-
-3. Create a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Linux
-```
-
-4. Install Python dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-5. Configure system permissions:
-```bash
-# Add user to i2c group
-sudo usermod -aG i2c $USER
+# Install ddcutil
+sudo apt-get install ddcutil
 
 # Enable i2c module
 sudo modprobe i2c-dev
 ```
 
-## Usage
+### Python Dependencies
 
-### Basic Usage
+```bash
+pip install -r requirements.txt
+```
 
-1. Start the application:
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/username/MonitorControl.git
+cd MonitorControl
+```
+
+2. Install Python dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the application:
 ```bash
 python src/main.py
 ```
 
-2. Use the dashboard for quick access to:
-   - Monitor selection
-   - Basic controls (brightness, contrast)
-   - Profile switching
-   - Status monitoring
+## Usage
 
-### Advanced Configuration
-
-Access the settings panel for:
-- Detailed monitor controls
-- Profile management
-- Application preferences
-- Keyboard shortcut configuration
-- Scheduling options
-
-## Development
-
-### Setting Up Development Environment
-
-1. Install development dependencies:
-```bash
-pip install pytest pytest-cov black flake8
-```
-
-2. Run tests:
-```bash
-pytest tests/
-```
-
-3. Format code:
-```bash
-black src/
-```
-
-### Development Phases
-
-1. **Foundation**
-   - Basic GUI setup
-   - ddcutil integration
-   - Monitor detection
-   - Basic controls
-
-2. **Core Features**
-   - Complete control interface
-   - Profile management
-   - Settings persistence
-   - Error handling
-
-3. **Advanced Features**
-   - Hotkey support
-   - Scheduling
-   - Multi-monitor optimization
-   - Advanced color management
-
-## Security
-
-- Secure handling of system permissions
-- Safe execution of ddcutil commands
-- Protection against invalid settings
-- Comprehensive error handling and recovery
+1. Select a monitor
+2. Adjust brightness and contrast using sliders
+3. Enable/disable DCR
+4. Control OSD menu
+5. Use predefined modes
 
 ## Troubleshooting
 
-### Common Issues
-- Monitor not detected: Verify i2c permissions and DDC/CI support
-- Permission errors: Ensure user is in the i2c group
-- Display server compatibility: Check X11/Wayland configuration
-- Command execution failures: Verify ddcutil installation and permissions
+1. "ddcutil is not installed" error:
+   - Make sure ddcutil is installed
+   - Make sure i2c-dev module is loaded
 
-## Future Plans
-
-- Support for additional monitor protocols
-- Network-based remote control
-- Plugin system for extensibility
-- Integration with color calibration tools
+2. "Permission denied" error:
+   - Add your user to i2c group:
+     ```bash
+     sudo usermod -a -G i2c $USER
+     ```
+   - Restart the system
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-If you encounter any issues or have questions:
-
-- Open an issue on GitHub
-- Check existing issues for solutions
-- Review the documentation
-- Verify your system meets all requirements
-
-## Acknowledgments
-
-- ddcutil development team
-- Qt development team
-- DBus and Linux community
-- All contributors and testers
+This project is licensed under the MIT License. 
+=======
+# CursorAI Projects
+>>>>>>> 71b554d9127bcb71348a5bdd2d388aacb4c5fb3a
