@@ -8,20 +8,28 @@ This repository contains software development projects focusing on system utilit
 A sophisticated Linux monitor control system that provides an intuitive interface for managing display settings through ddcutil.
 - **Tech Stack**: Python, Qt6, ddcutil
 - **Status**: Active Development
-- [View Project](MonitorControl/)
+- [View Project](./MonitorControl)
+
+### ChainBreaker 📱
+A habit tracking and development mobile application that helps users build and maintain positive habits through chain methodology.
+- **Tech Stack**: Flutter, Firebase, BLoC Pattern
+- **Status**: Active Development
+- [View Project](./ChainBreaker)
 
 ## Project Structure
 
 ```
 Cursor/
-└── MonitorControl/        # Linux monitor control system
+├── MonitorControl/        # Linux monitor control system
+└── ChainBreaker/         # Habit tracking mobile app
 ```
 
 ## Development Environment
 
 ### General Requirements
 - Git
-- Python 3.8+
+- Python 3.8+ (for MonitorControl)
+- Flutter SDK (for ChainBreaker)
 - Project-specific dependencies (see individual project READMEs)
 
 ### Setting Up
@@ -34,8 +42,14 @@ cd CursorAI
 
 2. Navigate to the project directory:
 ```bash
+# For MonitorControl
 cd MonitorControl
 # Follow the project's README.md for setup instructions
+
+# For ChainBreaker
+cd ChainBreaker
+flutter pub get
+# Configure Firebase as per README instructions
 ```
 
 ## Contributing
@@ -48,9 +62,10 @@ cd MonitorControl
 
 ## Project Status
 
-| Project | Status | Description |
-|---------|--------|-------------|
+| Project        | Status    | Description                         |
+|---------------|-----------|-------------------------------------|
 | MonitorControl | 🟢 Active | Monitor management system for Linux |
+| ChainBreaker  | 🟢 Active | Habit tracking mobile application   |
 
 ## License
 
